@@ -3,6 +3,9 @@ import exp from  'express'
 import {connect} from 'mongoose'
 import {userApp} from './APIs/UserAPI.js'
 import cookieParser from 'cookie-parser'
+import {config} from'dotenv'
+config();//process.env.PORT
+
 const app=exp();
 //add body parser
 app.use(exp.json())
@@ -16,7 +19,8 @@ app.use("/user-api",userApp)
 async function connectDB()
 {
     try{
-        await connect("mongodb://localhost:27017/anuragdb")
+        await connect (process.env.DB_URL)
+        //instead of await connect("mongodb://localhost:27017/anuragdb")//
         console.log("db server connected successfully")
         //start server
         app.listen(4000,()=>console.log("server on port 4000"))
@@ -36,7 +40,7 @@ connectDB();
 // }
 // )
 
-//modified error handling
+//modified error handling middleware
 app.use((err,req,res,next)=>
 {
     console.log(err.name)

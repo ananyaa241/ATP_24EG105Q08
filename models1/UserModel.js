@@ -1,7 +1,19 @@
-import {Schema,model} from 'mongoose'
+import {Schema,model,Types} from 'mongoose'
 
 //create User Schema(username,password,email,age)//these are the chosen fields..we can use more if needed
 //new is used to create obj of a class ...therefore it is an operator
+
+//create Cart Schema{ product,count}//fields of cart
+const cartSchema=new Schema({
+    product:{
+        type:Types.ObjectId,
+        ref:"product"//name of product model
+    },
+    count:{
+        type:Number,
+        default:1
+    }
+});
 const userSchema=new Schema({
     //structure of user resource
     username:{
@@ -25,12 +37,14 @@ const userSchema=new Schema({
         type:Number,
         required:[true]
     },
-    
-    },
-    {
+    cart:[cartSchema]//accept elements only that match with cart schema..or cartSchema obj type ...cart schema is object with 2 properties..count and product
+    //empty cart:[] will accept any type of obj},
+},
+{
         versionKey:false,
         timestamps:true,
-    }
+}
+
 
 );
 //Generate UserModel

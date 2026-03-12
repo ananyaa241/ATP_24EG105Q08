@@ -30,7 +30,7 @@ userApp.post('/auth',async(req,res)=>
     }
     //if passwrord are matched
     //create token(jsonwebtoken--jwt --jaat)
-    const signedToken=sign({email:user.email},"abcdef",{expiresIn:"1h"})//---only "100"->ms...only 100->seconds
+    const signedToken=sign({email:user.email},process.env.SECRET_KEY,{expiresIn:"1h"})//---only "100"->ms...only 100->seconds
    //store token aas httpOnly cookie
    res.cookie("token",signedToken,{
     httpOnly:true,
@@ -104,10 +104,19 @@ res.status(200).json({message:"users",payload:usersList});
 
 //refining the commented portion userApp.get to handle the null response and 200 ok response from the api
 
-userApp.get("/users/:id",async(req,res)=>{
-    //read onj id from req params
-    const uid=req.params.id//find user by id
-    const userObj=await UserModel.findById(uid);
+userApp.get("/user",verifyToken,async(req,res)=>{
+    //userApp.get("/users/:id",verifyToken,async(req,res)...instead of sending /:id in the url path
+    //we use userApp.get("/user",verifyToken,async(req,res)=>{
+    //read obj id from req params
+    //read user email from req
+
+    const emailOfUser=req.user?.email;
+    // console.log(emailOfUser)
+    // constuid=req.params.id
+    // //find user by id
+
+    
+    const userObj=await UserModel.findOne({email:emailOfUser}).populate("cart.product")
     //if user is not found
     if(!userObj)
     {
@@ -140,3 +149,43 @@ userApp.put("/users/:id",async(req,res)=>
 
 //app.use(verifyTOken)---->every req
 //userApp.get(path,verifyToken,req-handler)
+
+// //add product to cart
+// userApp.put("cart/product-id/:pid",async(req,res)=>{
+//     //get product id from url param
+//     let productId=req.params.pid;
+//     //get current user details
+//     const emailOfUser=req.user?.email
+    
+//     //add product to cart//Before add,first it should check that product is already there in the cart
+//     //if the product is there,then increment the count by 1
+//     //otherwise add that product to cart
+    
+//     let result=await UserModel.findOneAndUpdate({email:emailOfUser},{$push:{cart:{product:productId}}});
+//     if (!result)
+//     {
+//         return result.status(404).json({message:"User not found"});
+//     }
+    
+// res.status(200).json({message:"product added to cart"});
+// });//when we add object to an array then allways  they are compared with their references..so objeccts even wwith exact data will have different references thus 2 diff entities..
+
+
+userApp.put("cart/product-id/:pid",async(req,res)=>{
+    //get product id from url param
+    let productId=req.params.pid;
+    //get current user details
+    const emailOfUser=req.user?.email
+    
+    //add product to cart//Before add,first it should check that product is already there in the cart
+    //if the product is there,then increment the count by 1
+    //otherwise add that product to cart
+    
+    let result=await UserModel.findOneAndUpdate({email:emailOfUser},{$push:{cart:{product:productId}}});
+    if (!result)
+    {
+        return result.status(404).json({message:"User not found"});
+    }
+    
+res.status(200).json({message:"product added to cart"});
+});//when we add object to an array then allways  they are compared with their references..so objeccts even wwith exact data will have different references thus 2 diff entities..
