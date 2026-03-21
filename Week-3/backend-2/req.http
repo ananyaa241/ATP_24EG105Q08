@@ -1,0 +1,46 @@
+###Read all Users(Request to a protected route)
+GET http://localhost:4000/user-api/users
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhbWVzaEBnbWFpbC5jb20iLCJpYXQiOjE3NzI4NzgzMTUsImV4cCI6MTc3Mjg4MTkxNX0.XfyNJpXfbeNSxg8BzeeaZQfAOMCn3K33wSHem8RQ0Dw; Path=/; HttpOnly; SameSite=Lax
+
+### read
+GET http://localhost:4000/user-api/user
+
+###Create a new user
+POST http://localhost:4000/user-api/users
+Content-Type:application/json
+
+{
+    "username":"Bhanu",
+    "password":"bhanu32",
+    "email":"bhanu@gmail.com",
+    "age":20
+    
+}
+
+###update the content
+PUT http://localhost:4000/user-api/users/69aa8b699aca3d0ccd5fb8d4
+Content-Type:application/json
+
+{
+    "username":"Bhanu",
+    "password":"bhanu32",
+    "email":"bhanu@gmail.com",
+    "age":20
+    
+
+}
+
+###delete user by id
+DELETE http://localhost:4000/user-api/users/69aa8b699aca3d0ccd5fb8d4
+
+###user login
+POST http://localhost:4000/user-api/auth
+Content-Type:application/json
+
+{
+    "email":"ramesh@gmail.com",
+    "password":"Sudha"
+}
+
+###add product to user cart
+PUT http://localhost:4000/user-api/cart/product-id/69ab9ac2c8e812ac7466fee5
