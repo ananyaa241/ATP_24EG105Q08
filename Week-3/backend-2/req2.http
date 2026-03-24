@@ -1,0 +1,30 @@
+###view all product
+GET http://localhost:4000/product-api/products
+
+###view a product by id
+GET http://localhost:4000/product-api/products/101
+###create a product
+POST http://localhost:4000/product-api/products
+Content-Type:application/json
+
+{
+    "productid":101,
+    "productname":"sneakers",
+    "price":15000,
+    "brand":"nike"
+}
+
+###update the product details
+PUT http://localhost:4000/product-api/products/101
+Content-Type:application/json
+
+{
+    "productid":101,
+    "productname":"shirt",
+    "price":15000,
+    "brand":"zara"
+}
+
+###delete product by id
+DELETE http://localhost:4000/product-api/products/1
+
