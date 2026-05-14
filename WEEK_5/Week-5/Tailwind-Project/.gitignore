@@ -1,0 +1,22 @@
+# Node modules
+node_modules/
+
+# Dependency logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Tailwind / build
+dist/
+.cache/
+
+# Environment
+.env
+
+# Editor files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
