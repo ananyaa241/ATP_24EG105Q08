@@ -1,9 +1,9 @@
-# ⚛️ ATP Week 5: React & Modern Frontend
+#  ATP Week 5: React & Modern Frontend
 
-## 📋 Overview
+##  Overview
 Welcome to Week 5! This week introduces React, the popular JavaScript library for building user interfaces, along with Tailwind CSS for utility-first styling. You'll build interactive web applications and learn component-based development.
 
-## 📁 Folder Structure
+##  Folder Structure
 ```
 Week-5/
 ├── react-app-1/
@@ -30,26 +30,26 @@ Week-5/
     └── index.css
 ```
 
-## 🎯 Learning Objectives
+##  Learning Objectives
 
-### ⚛️ React Fundamentals
+###  React Fundamentals
 - Component-based architecture
 - JSX syntax
 - State and props
 - Event handling
 - React hooks basics
 
-### 🎨 Tailwind CSS
+###  Tailwind CSS
 - Utility-first CSS framework
 - Responsive design
 - Custom styling with Tailwind
 
-### 🛠️ Development Tools
+###  Development Tools
 - Vite for fast development
 - npm package management
 - Modern JavaScript tooling
 
-## 📝 Projects Overview
+##  Projects Overview
 
 ### React Apps
 - **react-app-1**: Basic React application setup with Vite
@@ -61,7 +61,7 @@ Week-5/
 ### HTML Tables
 - **tables/**: HTML table creation and styling exercises
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### For React Projects:
 1. Navigate to the project folder (e.g., `react-app-1`).
