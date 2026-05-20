@@ -13,21 +13,11 @@ config()
 //create express app
 const app=exp()
 
-// app.use(cors({
-//   origin: [
-//     "http://localhost:5173",
-//     // "https://blogapp-nine-rose-46.vercel.app"
-//     //"https://blogapplication-b-karthik13s-projects.vercel.app"
-//     "https://blogapplication-snowy.vercel.app/"
-//   ],
-//   credentials: true
-// }));
-
 app.use(cors({
   origin: (origin, callback) => {
     if (
       !origin ||
-      origin === "http://localhost:5173" ||
+      origin === "http://localhost:5174" ||
       /^https:\/\/.*\.vercel\.app$/.test(origin)
     ) {
       callback(null, true);
