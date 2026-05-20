@@ -1,6 +1,6 @@
 # MERN APPLICATION
 
-## Complete Updated Project Structure
+## Complete Project Structure
 
 ```
 Sample-Project/
