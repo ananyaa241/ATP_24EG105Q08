@@ -1,9 +1,9 @@
-# 🔥 ATP Week 2: Advanced JavaScript Concepts
+#  ATP Week 2: Advanced JavaScript Concepts
 
-## 📋 Overview
+##  Overview
 Dive deeper into JavaScript with Week 2! This week covers advanced topics like array operations, object-oriented programming with classes, modules, spread/rest operators, shallow/deep copying, and timer functions.
 
-## 📁 Folder Structure
+##  Folder Structure
 ```
 Week-2/
 ├── Array-Operations-Advanced/
@@ -41,35 +41,35 @@ Week-2/
     └── TimerfuncEx2.js
 ```
 
-## 🎯 Key Topics Covered
+##  Key Topics Covered
 
-### 🔢 Array Operations
+###  Array Operations
 - **Simple Operations**: Basic array manipulation, iteration, and methods
 - **Advanced Operations**: Complex array transformations, filtering, and advanced methods
 
-### 🏗️ Object-Oriented Programming
+###  Object-Oriented Programming
 - Classes and objects
 - Constructors, methods, and inheritance
 
-### 📦 Modules
+###  Modules
 - ES6 module system
 - Importing and exporting functions
 - Building modular applications (e.g., shopping cart system)
 
-### 🔄 Spread & Rest Operators
+###  Spread & Rest Operators
 - Spreading arrays and objects
 - Rest parameters in functions
 - Practical applications
 
-### 📋 Shallow vs Deep Copy
+###  Shallow vs Deep Copy
 - Understanding reference vs value
 - Implementing shallow and deep copying techniques
 
-### ⏰ Timer Functions
+###  Timer Functions
 - `setTimeout` and `setInterval`
 - Asynchronous programming basics
 
-## 🛠️ How to Run
+##  How to Run
 1. Navigate to any exercise folder.
 2. Run the JavaScript files with Node.js:
    ```bash
@@ -77,15 +77,13 @@ Week-2/
    ```
 3. For module exercises, ensure you're in the correct directory and run the main file (usually `app.js`).
 
-## 💡 Learning Tips
+##  Learning Tips
 - Start with simple array operations before moving to advanced ones.
 - Experiment with the spread operator in different scenarios.
 - Try modifying the timer functions to understand timing behavior.
 - For modules, check how different files interact.
 
-## 📚 Additional Resources
+##  Additional Resources
 - [JavaScript Array Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 - [ES6 Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 - [Modules Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
-
-Keep exploring the power of JavaScript! 🚀
