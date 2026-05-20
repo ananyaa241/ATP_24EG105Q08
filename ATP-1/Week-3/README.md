@@ -1,6 +1,6 @@
 #  ATP Week-3: Backend Development with Node.js
 
-## 📋 Overview
+##  Overview
 Welcome to Week 3 of the ATP course! This week focuses on backend development using Node.js, Express, MongoDB, and Mongoose. The main project in this folder is `backend-2`, which implements a user REST API with authentication and secure error handling.
 
 ##  Project Structure
