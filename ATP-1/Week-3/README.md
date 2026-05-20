@@ -1,9 +1,9 @@
-# 🚀 ATP Week-3: Backend Development with Node.js
+#  ATP Week-3: Backend Development with Node.js
 
 ## 📋 Overview
 Welcome to Week 3 of the ATP course! This week focuses on backend development using Node.js, Express, MongoDB, and Mongoose. The main project in this folder is `backend-2`, which implements a user REST API with authentication and secure error handling.
 
-## 🏗️ Project Structure
+##  Project Structure
 ```
 backend-2/
 ├── server.js              # Main Express application entry point
@@ -17,18 +17,18 @@ backend-2/
 └── README.md              # Project documentation
 ```
 
-## 🎯 Key Concepts Covered
-- ⚡ Express server setup and routing
-- 🔄 Creating RESTful endpoints for CRUD operations
-- 📊 Defining Mongoose schemas and models
-- 🗄️ Connecting Node.js to MongoDB
-- 🔐 User authentication with JWT
-- 🛡️ Password hashing using `bcrypt`
-- ⚙️ Environment configuration with `dotenv`
-- 🚨 Error handling middleware
-- 🔒 Protecting routes and authorization
+##  Key Concepts Covered
+-  Express server setup and routing
+-  Creating RESTful endpoints for CRUD operations
+-  Defining Mongoose schemas and models
+-  Connecting Node.js to MongoDB
+-  User authentication with JWT
+-  Password hashing using `bcrypt`
+-  Environment configuration with `dotenv`
+-  Error handling middleware
+-  Protecting routes and authorization
 
-## 🎓 Learning Outcomes
+##  Learning Outcomes
 By working through Week 3, you will learn how to:
 - Build a backend API from scratch using Express
 - Manage data persistence with MongoDB and Mongoose
@@ -36,7 +36,7 @@ By working through Week 3, you will learn how to:
 - Authenticate users and protect routes with tokens
 - Structure backend code into organized folders
 
-## 🚀 How to Run
+##  How to Run
 1. Open the `backend-2` folder in a terminal.
 2. Install dependencies:
    ```bash
@@ -52,16 +52,15 @@ By working through Week 3, you will learn how to:
    node server.js
    ```
 
-## 📝 API Testing
+##  API Testing
 Use the provided `req.http` files with REST Client extension in VS Code to test the endpoints.
 
-## 💡 Tips
+##  Tips
 - Always use environment variables for sensitive data
 - Implement proper error handling in all routes
 - Use middleware for repetitive tasks like authentication
 - Test your APIs thoroughly before deployment
 
-Happy backend coding! 🎉
 - The project uses `type: "module"` in `package.json`, so ES module imports are enabled.
 - The `req.http` and `req2.http` files provide example requests you can run from VS Code REST client extensions.
 - This week emphasizes backend fundamentals and prepares you for secure full-stack development.
