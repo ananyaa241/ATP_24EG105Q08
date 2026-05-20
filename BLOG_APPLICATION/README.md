@@ -1,8 +1,8 @@
 # Week 7 - Full-Stack Blog Application
 
 ##  Live Demo
-- **Frontend App**: [https://capstone-project-jade-six.vercel.app/](https://capstone-project-jade-six.vercel.app/)
-- **Backend API**: [https://two4eg105q08-capstone.onrender.com](https://two4eg105q08-capstone.onrender.com)
+- **Frontend App**: [https://q08capstone.vercel.app/](https://q08capstone.vercel.app/)
+- **Backend API**: [https://backend-07.onrender.com](https://backend-07.onrender.com)
 
 Welcome to Week 7! This week focuses on building a complete, production-ready **Full-Stack Application** from scratch. 
 
