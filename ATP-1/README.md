@@ -1,6 +1,6 @@
-# 🚀 ATP Full-Stack Development Journey
+#  ATP Full-Stack Development Journey
 
-## 📋 Overview
+##  Overview
 
 Welcome to the **ATP (Advanced Technology Program) Repository**! This comprehensive collection documents a 7-week intensive learning journey through full-stack web development, covering everything from JavaScript fundamentals to building production-ready MERN stack applications.
 
@@ -8,7 +8,7 @@ This repository showcases progressive skill development, starting with basic pro
 
 ---
 
-## 📚 Table of Contents
+##  Table of Contents
 
 - [Week 1: JavaScript Fundamentals](#week-1-javascript-fundamentals)
 - [Week 2: Advanced JavaScript Concepts](#week-2-advanced-javascript-concepts)
@@ -17,24 +17,24 @@ This repository showcases progressive skill development, starting with basic pro
 - [Week 5: React & Modern Frontend](#week-5-react--modern-frontend)
 - [Week 6: Advanced React Development](#week-6-advanced-react-development)
 - [Week 7: Full-Stack Capstone Project](#week-7-full-stack-capstone-project)
-- [🎯 Learning Outcomes](#-learning-outcomes)
-- [🛠️ Technologies Used](#️-technologies-used)
-- [📖 How to Use This Repository](#-how-to-use-this-repository)
+- [ Learning Outcomes](#-learning-outcomes)
+- [ Technologies Used](#️-technologies-used)
+- [ How to Use This Repository](#-how-to-use-this-repository)
 
 ---
 
 ## Week 1: JavaScript Fundamentals
 
-### 🎯 Purpose
+###  Purpose
 Establish a strong foundation in JavaScript programming by mastering core concepts, syntax, and basic problem-solving techniques.
 
-### 🤝 Contributions
+###  Contributions
 - Completed 8 foundational assignments covering variables, data types, operators, control structures, and functions
 - Practiced writing clean, executable JavaScript code
 - Developed debugging skills using console output
 - Built confidence in JavaScript execution environments
 
-### 📁 What's Included
+###  What's Included
 - **day1Assignments/**: 7 progressive exercises (Ass1.js - Ass7.js)
 - **day2Assignments/**: Advanced consolidation assignment (Ass1.js)
 - Comprehensive README with learning objectives and execution instructions
@@ -43,17 +43,17 @@ Establish a strong foundation in JavaScript programming by mastering core concep
 
 ## Week 2: Advanced JavaScript Concepts
 
-### 🎯 Purpose
+###  Purpose
 Deepen JavaScript knowledge by exploring advanced language features, object-oriented programming, and modern ES6+ capabilities essential for professional development.
 
-### 🤝 Contributions
+###  Contributions
 - Implemented complex array operations and transformations
 - Built modular applications using ES6 modules (shopping cart system)
 - Mastered object-oriented programming with classes and inheritance
 - Explored advanced concepts like shallow/deep copying and timer functions
 - Practiced spread/rest operators in practical scenarios
 
-### 📁 What's Included
+###  What's Included
 - **Array-Operations-Advanced/**: 5 complex array manipulation exercises
 - **Arrays-Operations-Simple/**: 3 foundational array exercises
 - **ClassesObjects/**: OOP assignment with classes and objects
@@ -66,17 +66,17 @@ Deepen JavaScript knowledge by exploring advanced language features, object-orie
 
 ## Week 3: Backend Development with Node.js
 
-### 🎯 Purpose
+###  Purpose
 Learn server-side development by building RESTful APIs with authentication, database integration, and secure data handling using the MERN stack backend technologies.
 
-### 🤝 Contributions
+###  Contributions
 - Developed a complete user management REST API with CRUD operations
 - Implemented secure authentication using JWT and password hashing
 - Designed MongoDB schemas and established database connections
 - Created custom middleware for error handling and route protection
 - Structured backend code following best practices
 
-### 📁 What's Included
+###  What's Included
 - **backend-2/**: Complete Express.js application with:
   - User authentication and authorization
   - MongoDB integration with Mongoose
@@ -89,17 +89,17 @@ Learn server-side development by building RESTful APIs with authentication, data
 
 ## Week 4: HTML & CSS Mastery
 
-### 🎯 Purpose
+###  Purpose
 Master front-end design and layout techniques using modern CSS methodologies, responsive design principles, and component-based styling approaches.
 
-### 🤝 Contributions
+###  Contributions
 - Created responsive layouts using CSS Grid and Flexbox
 - Designed and styled interactive forms and data tables
 - Built reusable UI components (user cards, city showcases)
 - Implemented mobile-first responsive design patterns
 - Practiced clean HTML structure and semantic markup
 
-### 📁 What's Included
+###  What's Included
 - **EX-1.html to EX-3.html**: Progressive HTML/CSS examples
 - **forms/**: Complete form design and validation styling
 - **grid container/**: CSS Grid layout implementation
@@ -111,17 +111,17 @@ Master front-end design and layout techniques using modern CSS methodologies, re
 
 ## Week 5: React & Modern Frontend
 
-### 🎯 Purpose
+###  Purpose
 Transition to modern front-end development by learning React's component-based architecture and utility-first CSS with Tailwind CSS for building interactive user interfaces.
 
-### 🤝 Contributions
+###  Contributions
 - Built interactive React applications using modern tooling (Vite)
 - Implemented component-based architecture with JSX
 - Styled applications using Tailwind CSS utility classes
 - Practiced state management and event handling in React
 - Created responsive, modern web interfaces
 
-### 📁 What's Included
+###  What's Included
 - **react-app-1/**: Basic React application with Vite setup
 - **react-assignment-1 & 2/**: Hands-on React component exercises
 - **Tailwind-Project/**: Utility-first CSS styling project
@@ -131,17 +131,17 @@ Transition to modern front-end development by learning React's component-based a
 
 ## Week 6: Advanced React Development
 
-### 🎯 Purpose
+###  Purpose
 Advance React skills by building complex applications, implementing testing practices, and integrating full-stack functionality with API communication.
 
-### 🤝 Contributions
+###  Contributions
 - Developed user management systems with form handling
 - Implemented advanced state management patterns
 - Created testable React components with unit testing
 - Built full-stack applications combining React frontend with Node.js backend
 - Practiced API integration and error handling
 
-### 📁 What's Included
+###  What's Included
 - **addingusers/**: User management React application
 - **react-assignment-1/**: Advanced React component exercises
 - **reacttest/**: React testing implementation
@@ -151,17 +151,17 @@ Advance React skills by building complex applications, implementing testing prac
 
 ## Week 7: Full-Stack Capstone Project
 
-### 🎯 Purpose
+###  Purpose
 Synthesize all learned skills by building a production-ready, multi-role blog platform that demonstrates real-world full-stack development capabilities.
 
-### 🤝 Contributions
+###  Contributions
 - Architected and implemented a complete blog application
 - Integrated role-based access control (Admin, Author, User)
 - Implemented secure file uploads with cloud storage
 - Managed global state using modern state management
 - Deployed full-stack application to production environments
 
-### 📁 What's Included
+###  What's Included
 - **blog-app/**: React frontend with:
   - Role-based dashboards and routing
   - Rich form handling and API integration
@@ -175,7 +175,7 @@ Synthesize all learned skills by building a production-ready, multi-role blog pl
 
 ---
 
-## 🎯 Learning Outcomes
+##  Learning Outcomes
 
 By completing this 7-week journey, you will have:
 
@@ -213,7 +213,7 @@ By completing this 7-week journey, you will have:
 
 ---
 
-## 📖 How to Use This Repository
+##  How to Use This Repository
 
 1. **Sequential Learning**: Start with Week 1 and progress through each week
 2. **Environment Setup**: Each week includes setup instructions in its README
@@ -240,7 +240,7 @@ cd Week-1
 
 ---
 
-## 🌟 Key Achievements
+##  Key Achievements
 
 - **Progressive Skill Building**: Each week builds upon previous knowledge
 - **Practical Projects**: Real-world applications, not just theory
@@ -248,7 +248,7 @@ cd Week-1
 - **Production Deployment**: Live applications with proper hosting
 - **Comprehensive Coverage**: Frontend, backend, database, and deployment
 
-## 📞 Support & Resources
+##  Support & Resources
 
 - Review individual week READMEs for detailed instructions
 - Check package.json files for dependencies
