@@ -1,6 +1,6 @@
 # Week 7 - Full-Stack Blog Application
 
-## 🌐 Live Demo
+##  Live Demo
 - **Frontend App**: [https://capstone-project-jade-six.vercel.app/](https://capstone-project-jade-six.vercel.app/)
 - **Backend API**: [https://two4eg105q08-capstone.onrender.com](https://two4eg105q08-capstone.onrender.com)
 
@@ -8,7 +8,7 @@ Welcome to Week 7! This week focuses on building a complete, production-ready **
 
 You will be combining everything learned so far—React, State Management, Express, MongoDB, and Authentication—to build a multi-role Blog Platform.
 
-## 📂 Project Architecture
+##  Project Architecture
 
 This week contains two major components of the Blog App architecture:
 
@@ -41,7 +41,7 @@ The server-side REST API built with Node.js and Express.
 
 ---
 
-## 🚀 Key Learning Objectives
+##  Key Learning Objectives
 
 By exploring and building this week's project, you will understand how to:
 1. **Implement Role-Based Access Control (RBAC)**: Restricting access to both frontend UI components and backend API endpoints based on whether a user is an Admin, Author, or regular User.
