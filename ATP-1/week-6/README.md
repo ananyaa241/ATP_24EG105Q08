@@ -1,9 +1,9 @@
-# 🚀 ATP Week 6: Advanced React Development
+#  ATP Week 6: Advanced React Development
 
-## 📋 Overview
+##  Overview
 Level up your React skills in Week 6! This week focuses on building more complex React applications, including user management systems, testing, and full-stack sample projects.
 
-## 📁 Folder Structure
+##  Folder Structure
 ```
 week-6/
 ├── addingusers/
@@ -29,26 +29,26 @@ week-6/
     └── frontend/
 ```
 
-## 🎯 Key Projects
+##  Key Projects
 
-### 👥 User Management App
+###  User Management App
 - **addingusers/**: React application for adding and managing users
 - Features: User forms, state management, component interactions
 
-### 📝 React Assignments
+###  React Assignments
 - **react-assignment-1/**: Advanced React component exercises
 - Practice complex state logic and component composition
 
-### 🧪 Testing with React
+###  Testing with React
 - **reacttest/**: Introduction to React testing
 - Unit tests and component testing practices
 
-### 🔄 Full-Stack Sample
+###  Full-Stack Sample
 - **Sample-Project/**: Complete MERN stack example
   - **backend/**: Node.js/Express API
   - **frontend/**: React client application
 
-## 🛠️ How to Run Projects
+##  How to Run Projects
 
 ### React Apps (addingusers, react-assignment-1, reacttest):
 1. Navigate to the project folder.
@@ -77,28 +77,28 @@ week-6/
    ```
 3. Access the full application at the frontend URL.
 
-## 💡 Learning Focus
+##  Learning Focus
 - Advanced state management
 - Component lifecycle and hooks
 - API integration with React
 - Testing React components
 - Full-stack application architecture
 
-## 📚 Recommended Learning Path
+##  Recommended Learning Path
 1. Start with `addingusers` for form handling and state.
 2. Move to `react-assignment-1` for complex component logic.
 3. Explore `reacttest` for testing fundamentals.
 4. Build understanding with the `Sample-Project` full-stack example.
 
-## 🔧 Development Tips
+##  Development Tips
 - Use React Developer Tools browser extension for debugging.
 - Practice lifting state up for component communication.
 - Implement proper error handling in API calls.
 - Write tests for your components to ensure reliability.
 
-## 📖 Resources
+##  Resources
 - [React Hooks Guide](https://react.dev/reference/react/hooks)
 - [Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 - [MERN Stack Tutorial](https://www.mongodb.com/languages/mern-stack-tutorial)
 
-Master React development! 🎯
+Master React development! 
