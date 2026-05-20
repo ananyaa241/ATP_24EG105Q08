@@ -1,4 +1,4 @@
-# Project Structure & Files Overview
+# MERN APPLICATION
 
 ## Complete Updated Project Structure
 
