@@ -80,16 +80,19 @@ import { hash, compare } from "bcryptjs";
 import { config } from "dotenv";
 import jwt from "jsonwebtoken";
 import { verifyToken } from "../middlewares/VerifyToken.js";
+import { upload } from "../config/multer.js";
+import { uploadToCloudinary } from "../config/cloudinaryUpload.js";
+
 const { sign } = jwt;
 export const commonApp = exp.Router();
 config();
 
 //Route for register
-commonApp.post("/users", async (req, res) => {
+commonApp.post("/users", upload.single("profileImageUrl"), async (req, res) => {
   try {
     let allowedRoles = ["USER", "AUTHOR"];
 
-    // get user from request body
+    // get user from request body (parsed by express.json if not using multer, but here multer parses it into req.body)
     const newUser = req.body;
 
     // check role
@@ -102,6 +105,12 @@ commonApp.post("/users", async (req, res) => {
 
     if (existingUser) {
       return res.status(409).json({ message: "Email already exists" });
+    }
+
+    // handle image upload to cloudinary
+    if (req.file) {
+      const uploadRes = await uploadToCloudinary(req.file.buffer);
+      newUser.profileImageURL = uploadRes.secure_url;
     }
 
     // hash password
@@ -117,6 +126,7 @@ commonApp.post("/users", async (req, res) => {
     res.status(201).json({ message: "User created successfully" });
 
   } catch (error) {
+    console.error("Registration error:", error);
     res.status(500).json({ message: "Error creating user", error: error.message });
   }
 });
@@ -139,7 +149,7 @@ commonApp.post("/login", async (req, res) => {
     return res.status(400).json({ message: "Invalid password" });
   }
   //create jwt
-  const signedToken = sign({id:user._id, email: email, role: user.role }, process.env.SECRET_KEY, { expiresIn: "1h" });
+  const signedToken = sign({ id: user._id, email: email, role: user.role }, process.env.SECRET_KEY, { expiresIn: "1h" });
 
   //set token to res header as httpOnly cookie
   res.cookie("token", signedToken, {
@@ -156,7 +166,7 @@ commonApp.post("/login", async (req, res) => {
 });
 
 //Route for Logout
-commonApp.get("/logout",  (req, res) => {
+commonApp.get("/logout", (req, res) => {
   //delete token from cookie storage
   res.clearCookie("token", {
     httpOnly: true,
@@ -164,7 +174,7 @@ commonApp.get("/logout",  (req, res) => {
     sameSite: "none",
   });
   //send res
-  res.status(200).json({message:"Logout success"})
+  res.status(200).json({ message: "Logout success" })
 });
 
 //Page refresh
@@ -177,29 +187,28 @@ commonApp.get("/check-auth", verifyToken("USER", "AUTHOR", "ADMIN"), (req, res) 
 
 
 //Change password
-commonApp.put("/password",verifyToken("USER","AUTHOR","ADMIN"),async (req,res) => {
-  try{
-  //check current passowrd and new password are same
-  const passwords =req.body
-  if(passwords.currentpassword===passwords.newpassword)
-    return res.status(500).json({message:"The passwords entered are same"})
-  //get current password of user/author/admin
-  const userId=req.user?.id
-  const user=await UserModel.findById(userId)
-  //check current password sent by client with the database
-  const isMatch = await compare(passwords.currentpassword, user.password);
-  if (!isMatch) {
-     return res.status(400).json({ message: "Wrong current password" });
+commonApp.put("/password", verifyToken("USER", "AUTHOR", "ADMIN"), async (req, res) => {
+  try {
+    //check current passowrd and new password are same
+    const passwords = req.body
+    if (passwords.currentpassword === passwords.newpassword)
+      return res.status(500).json({ message: "The passwords entered are same" })
+    //get current password of user/author/admin
+    const userId = req.user?.id
+    const user = await UserModel.findById(userId)
+    //check current password sent by client with the database
+    const isMatch = await compare(passwords.currentpassword, user.password);
+    if (!isMatch) {
+      return res.status(400).json({ message: "Wrong current password" });
+    }
+    //hash new password
+    const hashedpassword = await hash(passwords.newpassword, 12);
+    //replace current password of user with hashed new password 
+    user.password = hashedpassword
+    await user.save()
+    res.status(200).json({ message: "Passowrd Updated Successfully" })
   }
-  //hash new password
-  const hashedpassword = await hash(passwords.newpassword, 12);
-  //replace current password of user with hashed new password 
-  user.password=hashedpassword
-  await user.save()
-  res.status(200).json({message:"Passowrd Updated Successfully"})
-  }
-  catch(err)
-  {
-    res.status(404).json({message:"Password Updation Failed",payload:err.message})
+  catch (err) {
+    res.status(404).json({ message: "Password Updation Failed", payload: err.message })
   }
 })
