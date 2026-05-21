@@ -88,7 +88,7 @@ export const commonApp = exp.Router();
 config();
 
 //Route for register
-commonApp.post("/users", upload.single("profileImageUrl"), async (req, res) => {
+commonApp.post("/users", async (req, res) => {
   try {
     let allowedRoles = ["USER", "AUTHOR"];
 
