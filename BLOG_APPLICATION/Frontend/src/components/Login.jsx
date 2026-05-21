@@ -11,11 +11,11 @@ import {
   mutedText,
   linkClass,
   loadingClass,
-} from "../styles/common.js";
+} from "../styles/common";
 import { NavLink, useNavigate, useLocation } from "react-router";
 import { useAuth } from "../store/authStore";
-import { useEffect,useRef } from "react";
-import {toast} from 'react-hot-toast'
+import { useEffect } from "react";
+import { toast } from 'react-hot-toast'
 
 function Login() {
   const {
@@ -25,38 +25,32 @@ function Login() {
   } = useForm();
 
   const navigate = useNavigate();
-  const hasRedirected = useRef(false);
   //get state from auth store
   const { login, currentUser, loading, error, isAuthenticated } = useAuth((state) => state);
-
   //on user login
   const onUserLogin = (userCredObj) => {
     //call login() of auth store
-    hasRedirected.current = false;
     login(userCredObj);
   };
 
-
-
   useEffect(() => {
     //navigation logic
-    if (isAuthenticated && currentUser && !hasRedirected.current) {
-      hasRedirected.current = true;
+    if (isAuthenticated === true) {
       if (currentUser.role === "USER") {
-        //show success toast
-        toast.success("Login success and redirecting to User Profile",{duration:2000})
+        //show cuccess toast
+        toast.success("Login success and redirecting to User Profile", { duration: 2000 })
         navigate("/user-profile");
       }
       if (currentUser.role === "AUTHOR") {
-         toast.success("Login success and redirecting to Author Profile",{duration:2000})
+        toast.success("Login success and redirecting to Author Profile", { duration: 2000 })
         navigate("/author-profile");
       }
       if (currentUser.role === "ADMIN") {
-         toast.success("Login success and redirecting to Admin Profile",{duration:2000})
+        toast.success("Login success and redirecting to Admin Profile", { duration: 2000 })
         navigate("/admin-profile");
       }
     }
-  }, [isAuthenticated,currentUser]);
+  }, [isAuthenticated]);
 
   //deal with loading
   if (loading) {
@@ -70,7 +64,11 @@ function Login() {
         <h2 className={formTitle}>Sign In</h2>
 
         {/* API error */}
-        {error && <p className={errorClass}>{error}</p>}
+        {error && (
+          <p className={errorClass}>
+            {typeof error === "object" ? error.message || JSON.stringify(error) : error}
+          </p>
+        )}
 
         <form onSubmit={handleSubmit(onUserLogin)}>
           {/* Email */}
