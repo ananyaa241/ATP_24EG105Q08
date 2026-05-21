@@ -69,7 +69,11 @@ function Register() {
         <h2 className={formTitle}>Create an Account</h2>
 
         {/* API Error */}
-        {apiError && <p className={errorClass}>{apiError}</p>}
+        {apiError && (
+          <p className={errorClass}>
+            {typeof apiError === "object" ? apiError.message || JSON.stringify(apiError) : apiError}
+          </p>
+        )}
 
         <form onSubmit={handleSubmit(onUserRegister)}>
           {/* ROLE */}
