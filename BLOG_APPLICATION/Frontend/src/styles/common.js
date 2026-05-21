@@ -1,100 +1,99 @@
 // src/styles/common.js
-// Theme: Premium Commercial Dark — Deep backgrounds, glassmorphism, dynamic gradients, micro-animations
+// Theme: Professional Commercial Palette - Indigo, Violet, Pink, and Slate with premium depth and micro-animations
 
-// ─── Layout ───────────────────────────────────────────
-export const pageBackground = "bg-slate-900 min-h-screen text-slate-200 selection:bg-indigo-500/30 font-sans";
-export const pageWrapper = "max-w-5xl mx-auto px-6 py-16 animate-[fadeIn_0.5s_ease-out]";
-export const section = "mb-14";
+// --- Layout -------------------------------------------
+export const pageBackground = "bg-slate-50 text-slate-900 min-h-screen selection:bg-indigo-200/50 font-sans antialiased";
+export const pageWrapper = "max-w-6xl mx-auto px-6 py-16 animate-fade-in-up";
+export const section = "mb-16";
 
-// ─── Cards ────────────────────────────────────────────
+// --- Cards --------------------------------------------
 export const cardClass =
-  "bg-slate-800/50 backdrop-blur-md border border-slate-700/50 rounded-2xl p-7 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/10 hover:border-indigo-500/30 transition-all duration-300 cursor-pointer";
+  "bg-white border border-slate-200/60 rounded-[2rem] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(99,102,241,0.12)] hover:-translate-y-1.5 transition-all duration-500 cursor-pointer overflow-hidden backdrop-blur-sm";
 
-// ─── Typography ───────────────────────────────────────
-export const pageTitleClass = "text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 tracking-tight leading-tight mb-4 animate-[fadeInUp_0.5s_ease-out]";
-export const headingClass = "text-2xl font-bold text-slate-100 tracking-tight";
-export const subHeadingClass = "text-lg font-semibold text-slate-200 tracking-tight";
-export const bodyText = "text-slate-400 leading-relaxed";
-export const mutedText = "text-sm text-slate-500";
-export const linkClass = "text-indigo-400 hover:text-indigo-300 hover:underline transition-colors duration-200";
+// --- Typography ---------------------------------------
+export const pageTitleClass = "text-6xl font-black text-slate-900 tracking-tight leading-[1.1] mb-6 animate-fade-in-up";
+export const headingClass = "text-4xl font-extrabold text-slate-900 tracking-tight leading-tight";
+export const subHeadingClass = "text-xl font-medium text-slate-600 tracking-normal leading-relaxed";
+export const bodyText = "text-slate-600 leading-loose text-lg";
+export const mutedText = "text-sm text-slate-500 font-medium";
+export const linkClass = "text-indigo-600 hover:text-pink-600 font-semibold transition-all duration-300 decoration-2 underline-offset-4 hover:underline";
 
-// ─── Buttons ──────────────────────────────────────────
+// --- Buttons ------------------------------------------
 export const primaryBtn =
-  "bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold px-6 py-2.5 rounded-full hover:shadow-lg hover:shadow-indigo-500/30 hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer text-sm tracking-wide flex justify-center items-center";
+  "bg-gradient-to-br from-indigo-600 via-violet-600 to-pink-500 text-white font-bold px-8 py-3.5 rounded-2xl hover:shadow-[0_10px_25px_-5px_rgba(99,102,241,0.4)] hover:scale-[1.03] active:scale-95 transition-all duration-300 cursor-pointer text-sm tracking-widest uppercase flex justify-center items-center gap-2 border border-white/10";
 export const secondaryBtn =
-  "bg-slate-800 border border-slate-700 text-slate-200 font-medium px-6 py-2.5 rounded-full hover:bg-slate-700 hover:border-slate-600 transition-all duration-200 cursor-pointer text-sm hover:shadow-md flex justify-center items-center";
-export const ghostBtn = "text-indigo-400 font-medium hover:text-indigo-300 hover:bg-indigo-500/10 px-4 py-2 rounded-full transition-all duration-200 cursor-pointer text-sm flex justify-center items-center";
+  "bg-slate-900 text-white font-bold px-8 py-3.5 rounded-2xl hover:bg-slate-800 hover:shadow-xl hover:shadow-slate-900/10 transition-all duration-300 cursor-pointer text-sm tracking-wider uppercase flex justify-center items-center gap-2";
+export const ghostBtn = "text-slate-700 font-bold hover:text-indigo-600 hover:bg-indigo-50/50 px-6 py-3 rounded-2xl transition-all duration-300 cursor-pointer text-sm tracking-wider uppercase flex justify-center items-center gap-2";
 
-// ─── Forms ────────────────────────────────────────────
-export const formCard = "bg-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-10 max-w-xl mx-auto shadow-2xl shadow-black/50 animate-[fadeInUp_0.5s_ease-out]";
-export const formTitle = "text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400 tracking-tight text-center mb-8";
-export const labelClass = "text-xs font-semibold text-slate-400 mb-2 block uppercase tracking-wider";
+// --- Forms --------------------------------------------
+export const formCard = "bg-white/80 backdrop-blur-xl shadow-[0_32px_64px_-12px_rgba(0,0,0,0.14)] border border-slate-200/60 rounded-[2.5rem] p-12 max-w-xl mx-auto animate-fade-in-up";
+export const formTitle = "text-4xl font-black text-slate-950 tracking-tight text-center mb-10";
+export const labelClass = "text-[11px] font-bold text-slate-500 mb-2.5 block uppercase tracking-[0.15em]";
 export const inputClass =
-  "w-full bg-slate-900/50 border border-slate-700 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder:text-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition-all duration-300";
-export const formGroup = "mb-5";
+  "w-full bg-slate-50/50 border-2 border-slate-100 rounded-2xl px-5 py-4 text-slate-900 text-base placeholder:text-slate-400 focus:outline-none focus:border-indigo-400 focus:ring-4 focus:ring-indigo-500/10 transition-all duration-300 shadow-inner";
+export const formGroup = "mb-6";
 export const submitBtn =
-  "w-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-bold py-3 rounded-xl hover:shadow-lg hover:shadow-indigo-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 cursor-pointer mt-4 text-sm tracking-wide";
+  "w-full bg-gradient-to-r from-indigo-600 via-violet-600 to-pink-500 text-white font-black py-4.5 rounded-2xl hover:shadow-2xl hover:shadow-indigo-500/30 hover:-translate-y-1 active:translate-y-0.5 transition-all duration-300 cursor-pointer mt-6 text-sm tracking-[0.2em] uppercase";
 
-// ─── Navbar ───────────────────────────────────────────
+// --- Navbar -------------------------------------------
 export const navbarClass =
-  "bg-slate-900/80 backdrop-blur-2xl border-b border-slate-800/80 px-8 h-[72px] flex items-center sticky top-0 z-50 shadow-sm shadow-black/20";
-export const navContainerClass = "max-w-5xl mx-auto w-full flex items-center justify-between";
-export const navBrandClass = "text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-pink-400 tracking-tighter hover:opacity-80 transition-opacity";
-export const navLinksClass = "flex items-center gap-8";
-export const navLinkClass = "text-sm font-medium text-slate-400 hover:text-slate-100 transition-colors duration-200 relative group";
-export const navLinkActiveClass = "text-sm font-semibold text-indigo-400 relative after:content-[''] after:absolute after:-bottom-6 after:left-0 after:w-full after:h-0.5 after:bg-indigo-400";
+  "bg-white/80 backdrop-blur-2xl border-b border-slate-100 px-10 h-[88px] flex items-center sticky top-0 z-50 shadow-[0_1px_2px_rgba(0,0,0,0.03)]";
+export const navContainerClass = "max-w-7xl mx-auto w-full flex items-center justify-between";
+export const navBrandClass = "text-3xl font-black text-slate-950 tracking-tighter hover:text-indigo-600 transition-all duration-300 hover:scale-105";
+export const navLinksClass = "flex items-center gap-10";
+export const navLinkClass = "text-sm font-bold text-slate-600 hover:text-indigo-600 transition-all duration-300 relative group";
+export const navLinkActiveClass = "text-sm font-black text-indigo-600 relative after:content-[''] after:absolute after:-bottom-8 after:left-0 after:w-full after:h-1 after:bg-indigo-600 after:rounded-t-full";
 
-// ─── Article / Blog ───────────────────────────────────
-export const articleGrid = "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 animate-[fadeIn_0.7s_ease-out]";
+// --- Article / Blog -----------------------------------
+export const articleGrid = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 animate-fade-in";
 export const articleCardClass =
-  "group bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-7 hover:-translate-y-2 hover:bg-slate-800/80 hover:shadow-2xl hover:shadow-purple-500/10 hover:border-purple-500/30 transition-all duration-300 flex flex-col gap-3 cursor-pointer overflow-hidden relative";
-export const articleTitle = "text-xl font-bold text-slate-100 leading-snug tracking-tight group-hover:text-indigo-300 transition-colors";
-export const articleExcerpt = "text-sm text-slate-400 leading-relaxed line-clamp-3";
-export const articleMeta = "text-xs text-slate-500 flex items-center gap-2";
-export const articleBody = "text-slate-300 leading-relaxed text-base max-w-2xl";
-export const timestampClass = "text-xs text-slate-500 flex items-center gap-1.5";
-export const tagClass = "text-[0.65rem] font-bold text-indigo-400 bg-indigo-500/10 px-2 py-1 rounded-md uppercase tracking-wider w-fit";
+  "group bg-white border border-slate-200/50 rounded-[2.5rem] p-8 hover:-translate-y-3 hover:shadow-[0_30px_60px_-15px_rgba(99,102,241,0.2)] transition-all duration-500 flex flex-col gap-5 cursor-pointer overflow-hidden relative border-b-4 border-b-slate-100 hover:border-b-indigo-400";
+export const articleTitle = "text-2xl font-extrabold text-slate-950 leading-tight tracking-tight group-hover:text-indigo-600 transition-colors duration-300";
+export const articleExcerpt = "text-base text-slate-600 leading-relaxed line-clamp-3 font-medium";
+export const articleMeta = "text-xs text-slate-400 flex items-center gap-3 font-bold tracking-widest uppercase";
+export const articleBody = "text-slate-700 leading-relaxed text-lg max-w-3xl font-medium";
+export const timestampClass = "text-xs text-slate-400 flex items-center gap-2 font-bold";
+export const tagClass = "text-[10px] font-black text-indigo-600 bg-indigo-50/80 px-3 py-1.5 rounded-xl uppercase tracking-[0.1em] w-fit border border-indigo-100 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300";
 
-// ─── Article Page ─────────────────────────────────────
-export const articlePageWrapper = "max-w-3xl mx-auto px-6 py-16 animate-[fadeInUp_0.5s_ease-out]";
-export const articleHeader = "mb-12 flex flex-col gap-5";
-export const articleCategory = "text-xs font-bold uppercase tracking-widest text-indigo-400 bg-indigo-500/10 px-3 py-1.5 rounded-full w-fit";
-export const articleMainTitle = "text-5xl font-extrabold text-slate-100 leading-tight tracking-tight";
-export const articleAuthorRow =
-  "flex items-center justify-between border-t border-b border-slate-800 py-5 text-sm text-slate-400 mt-4";
-export const authorInfo = "flex items-center gap-3 font-semibold text-slate-200";
-export const articleContent = "text-slate-300 leading-loose text-lg whitespace-pre-line mt-10 font-serif";
-export const articleFooter = "border-t border-slate-800 mt-16 pt-8 text-sm text-slate-500 flex justify-between items-center";
+// --- Article Page -------------------------------------
+export const articlePageWrapper = "max-w-4xl mx-auto px-8 py-20 animate-fade-in-up";
+export const articleHeader = "mb-16 flex flex-col gap-6 text-center";
+export const articleCategory = "text-[11px] font-black uppercase tracking-[0.2em] text-indigo-600 bg-indigo-50 px-4 py-2 rounded-2xl w-fit mx-auto border border-indigo-100";
+export const articleMainTitle = "text-6xl font-black text-slate-900 leading-[1.1] tracking-tighter";
+export const articleAuthorRow = "flex items-center justify-between border-y border-slate-100 py-8 text-sm text-slate-600 mt-8";
+export const authorInfo = "flex items-center gap-4 font-bold text-slate-900 text-base";
+export const articleContent = "text-slate-800 leading-[1.8] text-xl whitespace-pre-line mt-12 font-medium max-w-none";
+export const articleFooter = "border-t border-slate-100 mt-20 pt-10 text-sm text-slate-400 flex justify-between items-center font-bold tracking-widest uppercase";
 
-// ─── Article Actions ─────────────────────────────
-export const articleActions = "flex gap-3 mt-8";
-export const editBtn = "bg-slate-800 text-indigo-400 border border-indigo-500/30 text-sm font-medium px-5 py-2.5 rounded-full hover:bg-indigo-500 hover:text-white transition-all duration-300 shadow-sm hover:shadow-indigo-500/25";
-export const deleteBtn = "bg-slate-800 text-rose-400 border border-rose-500/30 text-sm font-medium px-5 py-2.5 rounded-full hover:bg-rose-500 hover:text-white transition-all duration-300 shadow-sm hover:shadow-rose-500/25";
+// --- Article Actions -----------------------------
+export const articleActions = "flex gap-4 mt-12 flex-wrap justify-center sm:justify-start";
+export const editBtn = "bg-slate-900 text-white text-xs font-black px-7 py-3.5 rounded-2xl hover:bg-indigo-600 transition-all duration-300 shadow-lg tracking-widest uppercase";
+export const deleteBtn = "bg-rose-500 text-white text-xs font-black px-7 py-3.5 rounded-2xl hover:bg-rose-600 transition-all duration-300 shadow-lg tracking-widest uppercase";
 
-// ─── Article Status Badge ─────────────────────────
+// --- Article Status Badge -------------------------
 export const articleStatusActive =
-  "absolute top-4 right-4 text-[10px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/20";
+  "absolute top-6 right-6 text-[10px] font-black px-3 py-1.5 rounded-xl bg-emerald-500/10 text-emerald-600 border border-emerald-500/10 tracking-widest uppercase";
 export const articleStatusDeleted =
-  "absolute top-4 right-4 text-[10px] font-bold px-2.5 py-1 rounded-full bg-rose-500/20 text-rose-400 border border-rose-500/20";
+  "absolute top-6 right-6 text-[10px] font-black px-3 py-1.5 rounded-xl bg-rose-500/10 text-rose-600 border border-rose-500/10 tracking-widest uppercase";
 
-// ─── Feedback ─────────────────────────────────────────
+// --- Feedback -----------------------------------------
 export const errorClass =
-  "bg-rose-500/10 text-rose-400 border border-rose-500/20 rounded-xl px-5 py-4 text-sm font-medium flex items-center gap-2 animate-[shake_0.5s_ease-in-out]";
+  "bg-rose-50 text-rose-700 border-2 border-rose-100 rounded-2xl px-6 py-5 text-sm font-bold flex items-center gap-3 animate-shake";
 export const successClass =
-  "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-xl px-5 py-4 text-sm font-medium flex items-center gap-2 animate-[fadeIn_0.5s_ease-out]";
-export const loadingClass = "text-indigo-400 text-sm font-medium animate-pulse text-center py-12 flex flex-col items-center gap-3";
-export const emptyStateClass = "text-center text-slate-500 py-20 text-sm font-medium border border-dashed border-slate-700 rounded-2xl bg-slate-800/20 animate-[fadeIn_0.5s_ease-out]";
+  "bg-emerald-50 text-emerald-700 border-2 border-emerald-100 rounded-2xl px-6 py-5 text-sm font-bold flex items-center gap-3 animate-fade-in";
+export const loadingClass = "text-indigo-600 text-sm font-black animate-pulse text-center py-20 flex flex-col items-center gap-4 tracking-widest uppercase";
+export const emptyStateClass = "text-center text-slate-400 py-32 text-base font-bold border-2 border-dashed border-slate-200 rounded-[3rem] bg-slate-50/50 animate-fade-in tracking-tight";
 
-// ─── Comments ───────────────────────────────────────
-export const commentsWrapper = "mt-16 flex flex-col gap-6";
-export const commentCard = "bg-slate-800/30 border border-slate-700/50 rounded-2xl p-6 transition-all hover:bg-slate-800/50 hover:border-slate-600/50 animate-[fadeInUp_0.5s_ease-out]";
-export const commentHeader = "flex items-center justify-between mb-3";
-export const commentUser = "text-sm font-bold text-slate-200";
-export const commentTime = "text-xs text-slate-500";
-export const commentText = "text-slate-300 text-sm leading-relaxed";
+// --- Comments ---------------------------------------
+export const commentsWrapper = "mt-24 flex flex-col gap-10";
+export const commentCard = "bg-white border border-slate-200/50 rounded-[2rem] p-8 transition-all hover:bg-slate-50 shadow-sm border-l-4 border-l-transparent hover:border-l-indigo-400";
+export const commentHeader = "flex items-center justify-between mb-4";
+export const commentUser = "text-base font-black text-slate-900";
+export const commentTime = "text-xs text-slate-400 font-bold uppercase tracking-widest";
+export const commentText = "text-slate-700 text-base leading-relaxed font-medium";
 export const avatar =
-  "w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 text-white flex items-center justify-center text-sm font-bold shadow-md";
-export const commentUserRow = "flex items-center gap-4";
+  "w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-500 via-violet-500 to-pink-500 text-white flex items-center justify-center text-lg font-black shadow-xl border-2 border-white/20";
+export const commentUserRow = "flex items-center gap-5";
 
-// ─── Divider ──────────────────────────────────────────
-export const divider = "border-t border-slate-800 my-12";
+// --- Divider ------------------------------------------
+export const divider = "border-t-2 border-slate-100 my-16";
