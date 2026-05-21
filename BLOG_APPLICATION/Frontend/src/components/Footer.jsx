@@ -1,11 +1,9 @@
-import React from "react";
-
 function Footer() {
   return (
-    <footer className="border-t border-[#e8e8ed] bg-white/80 backdrop-blur-xl">
-      <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between text-sm text-[#6e6e73]">
-        <p>© 2026 MyBlog. Built for thoughtful reading and confident writing.</p>
-        <p className="text-[#0066cc]">Clean interface · calm typography · modern layout</p>
+    <footer className="bg-white/80 backdrop-blur-md border-t border-slate-100 text-slate-500 py-10">
+      <div className="max-w-7xl mx-auto flex flex-col gap-4 px-10 text-center sm:flex-row sm:justify-between sm:text-left font-bold text-xs tracking-widest uppercase">
+        <p>© 2026 Blog App STUDIO. Modern Publishing Reimagined.</p>
+        <p className="text-indigo-600">Premium Commercial Grade Design</p>
       </div>
     </footer>
   );
