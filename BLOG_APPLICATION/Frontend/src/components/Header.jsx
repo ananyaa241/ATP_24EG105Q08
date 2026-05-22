@@ -7,7 +7,7 @@ import {
   navLinksClass,
   navLinkClass,
   navLinkActiveClass,
-} from "../styles/common.js";
+} from "../styles/common";
 
 function Header() {
   const isAuthenticated = useAuth((state) => state.isAuthenticated);
@@ -99,3 +99,45 @@ function Header() {
 }
 
 export default Header;
+
+
+
+
+
+/*import React from 'react'
+import { NavLink } from 'react-router'
+import { navBrandClass,navLinkClass,navLinksClass,navContainerClass,navbarClass,navLinkActiveClass } from '../styles/common'
+import { useAuth } from '../store/authStore'
+
+function Header() {
+
+  const {isAuthenticated,logout}=useAuth();
+
+  return (
+    <div className="flex justify-between bg-gray-300">
+        <img 
+        className="w-30 p-5"
+        src="#"
+        alt="This Image not Available" 
+        
+        />
+
+        <nav className="flex justify-end gap-9 p-8 text-2xl bg-gray-300">
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="register">Register</NavLink>
+            {isAuthenticated===true?(
+            <NavLink onclick={logout} className={({isActive})=>(isActive? navLinkActiveClass:navLinkClass )}>
+              Logout
+            </NavLink>
+            ):(
+            <NavLink to="login" className={({isActive})=>(isActive? navLinkActiveClass:navLinkClass )}>
+              Login
+            </NavLink>
+            )
+            } 
+        </nav>
+    </div>
+  )
+}
+
+export default Header*/
