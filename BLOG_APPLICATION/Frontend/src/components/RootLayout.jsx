@@ -17,14 +17,14 @@ function RootLayout() {
   }
 
   return (
-    <div className="min-h-screen bg-[#f5f6fb] text-[#1d1d1f]">
+    <div>
       <Header />
-      <main className="max-w-6xl mx-auto px-6 py-10">
+      <div className='min-h-screen mx-32'>
         <Outlet />
-      </main>
+      </div>
       <Footer />
     </div>
-  );
+  )
 }
 
 export default RootLayout;
