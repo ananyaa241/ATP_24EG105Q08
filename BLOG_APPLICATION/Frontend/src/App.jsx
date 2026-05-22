@@ -1,17 +1,17 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
-import RootLayout from "./components/RootLayout.jsx";
-import Home from "./components/Home.jsx";
-import Register from "./components/Register.jsx";
-import Login from "./components/Login.jsx";
-import UserProfile from "./components/UserProfile.jsx";
-import AuthorProfile from "./components/AuthorProfile.jsx";
-import AuthorArticles from "./components/AuthorArticles.jsx";
-import EditArticle from "./components/EditArticle.jsx";
-import WriteArticles from "./components/WriteArticles.jsx";
-import ArticleByID from "./components/ArticleByID.jsx";
+import RootLayout from "./components/RootLayout";
+import Home from "./components/Home";
+import Register from "./components/Register";
+import Login from "./components/Login";
+import UserProfile from "./components/UserProfile";
+import AuthorProfile from "./components/AuthorProfile";
+import AuthorArticles from "./components/AuthorArticles";
+import EditArticle from "./components/EditArticle";
+import WriteArticles from "./components/WriteArticles";
+import ArticleByID from "./components/ArticleByID";
 import { Toaster } from "react-hot-toast";
-import Unauthorized from "./components/Unauthorized.jsx";
-import ProtectedRoute from "./components/ProtectedRoute.jsx";
+import Unauthorized from "./components/Unauthorized";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   const routerObj = createBrowserRouter([
