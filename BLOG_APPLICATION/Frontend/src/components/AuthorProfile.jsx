@@ -1,21 +1,20 @@
 import { NavLink, Outlet, useNavigate } from "react-router";
 import { useAuth } from "../store/authStore";
-import { pageWrapper, navLinkClass, divider } from "../styles/common.js";
+
+import { pageWrapper, navLinkClass, divider } from "../styles/common";
 
 function AuthorProfile() {
   const currentUser = useAuth((state) => state.currentUser);
   const logout = useAuth((state) => state.logout);
   const navigate = useNavigate();
 
+  //call t6his function on logout
   const onLogout = async () => {
+    //call login route
     await logout();
+    //navigate to login component
     navigate("/login");
   };
-
-  // ✅ handle loading state
-  if (!currentUser) {
-    return <p className="text-center mt-10">Loading profile...</p>;
-  }
 
   return (
     <div className={pageWrapper}>
@@ -32,29 +31,27 @@ function AuthorProfile() {
             />
           ) : (
             <div className="w-16 h-16 rounded-full bg-[#0066cc]/10 text-[#0066cc] flex items-center justify-center text-xl font-semibold">
-              {currentUser?.firstName?.charAt(0)?.toUpperCase() || "A"}
+              {currentUser?.firstName?.charAt(0).toUpperCase()}
             </div>
           )}
 
           {/* Name */}
           <div>
             <p className="text-sm text-[#6e6e73]">Welcome back</p>
-            <h2 className="text-xl font-semibold text-[#1d1d1f]">
-              {currentUser?.firstName}
-            </h2>
+            <h2 className="text-xl font-semibold text-[#1d1d1f]">{currentUser?.firstName}</h2>
           </div>
         </div>
 
         {/* LOGOUT */}
         <button
           className="bg-[#ff3b30] text-white text-sm px-5 py-2 rounded-full hover:bg-[#d62c23] transition"
-          onClick={onLogout}   // ✅ FIXED
+          onClick={onLogout}
         >
           Logout
         </button>
       </div>
 
-      {/* NAVIGATION */}
+      {/* NAVIGATION (TABS STYLE) */}
       <div className="flex gap-3 mb-6 bg-[#f5f5f7] p-2 rounded-full w-fit">
         <NavLink
           to="articles"
